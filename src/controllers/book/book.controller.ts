@@ -1,13 +1,15 @@
-import { Controller, Get } from '@nestjs/common';
-import { Book } from 'src/modules/book/book.service';
+import { Controller, Get, Param } from '@nestjs/common';
+import { BookService } from 'src/modules/book/book.service';
 
 @Controller('book')
 export class BookController {
 
-    constructor(private readonly book: Book) { }
+    constructor(private readonly book: BookService) { }
 
-    @Get()
-    getOne() {
-        return this.book.getOne();
+    @Get(':authorId')
+    getOne(
+        @Param('authorId') authorId: string,
+    ) {
+        return this.book.findAllAuthorBooks(authorId);
     }
 }

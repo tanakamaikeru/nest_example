@@ -1,5 +1,4 @@
 import { ConnectionOptions } from "typeorm";
-
 const connectionOptions: ConnectionOptions = {
     type: 'mysql',
     host: 'db',
