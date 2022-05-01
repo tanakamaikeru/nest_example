@@ -1,7 +1,11 @@
 # compiled output
 /dist
+
+# node_modules
 /node_modules
-/db
+
+# db_data
+.devcontainer/db
 
 # Logs
 logs

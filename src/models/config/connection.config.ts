@@ -9,6 +9,7 @@ const connectionOptions: ConnectionOptions = {
     entities: ["dist/models/entities/**/*{.js,.ts}"],
     migrations: ["dist/models/migrations/**/*{.js,.ts}"],
     synchronize: false,
+    logging: true,
     cli: {
         entitiesDir: './src/models/entities',
         migrationsDir: './src/models/migrations',
