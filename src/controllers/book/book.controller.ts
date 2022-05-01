@@ -3,13 +3,10 @@ import { BookService } from 'src/modules/book/book.service';
 
 @Controller('book')
 export class BookController {
+  constructor(private readonly book: BookService) {}
 
-    constructor(private readonly book: BookService) { }
-
-    @Get(':authorId')
-    getOne(
-        @Param('authorId') authorId: string,
-    ) {
-        return this.book.findAllAuthorBooks(authorId);
-    }
+  @Get(':authorId')
+  getOne(@Param('authorId') authorId: string) {
+    return this.book.findAllAuthorBooks(authorId);
+  }
 }

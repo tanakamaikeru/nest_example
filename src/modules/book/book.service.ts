@@ -5,14 +5,14 @@ import { Repository } from 'typeorm';
 
 @Injectable()
 export class BookService {
-    constructor(
-        @InjectRepository(Book)
-        private readonly bookRepo: Repository<Book>
-    ) { }
+  constructor(
+    @InjectRepository(Book)
+    private readonly bookRepo: Repository<Book>,
+  ) {}
 
-    async findAllAuthorBooks(authorId: string): Promise<Book[]> {
-        return this.bookRepo.find({
-            authorId: authorId
-        });
-    }
+  async findAllAuthorBooks(authorId: string): Promise<Book[]> {
+    return this.bookRepo.find({
+      authorId: authorId,
+    });
+  }
 }
