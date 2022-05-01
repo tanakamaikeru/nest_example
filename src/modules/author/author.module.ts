@@ -4,8 +4,8 @@ import { Author } from 'src/models/entities/author.entity';
 import { AuthorService } from './author.service';
 
 @Module({
-    imports: [TypeOrmModule.forFeature([Author])],
-    providers: [AuthorService],
-    exports: [AuthorService]
+  imports: [TypeOrmModule.forFeature([Author])],
+  providers: [AuthorService],
+  exports: [AuthorService],
 })
-export class AuthorModule { }
+export class AuthorModule {}

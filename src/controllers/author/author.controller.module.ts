@@ -3,7 +3,7 @@ import { AuthorModule } from 'src/modules/author/author.module';
 import { AuthorController } from './author.controller';
 
 @Module({
-    imports: [AuthorModule],
-    controllers: [AuthorController],
+  imports: [AuthorModule],
+  controllers: [AuthorController],
 })
-export class AuthorCtrModule { }
+export class AuthorCtrModule {}

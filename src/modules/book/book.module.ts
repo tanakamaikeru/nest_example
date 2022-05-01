@@ -4,8 +4,8 @@ import { Book } from 'src/models/entities/book.entity';
 import { BookService } from './book.service';
 
 @Module({
-    imports: [TypeOrmModule.forFeature([Book])],
-    providers: [BookService],
-    exports: [BookService]
+  imports: [TypeOrmModule.forFeature([Book])],
+  providers: [BookService],
+  exports: [BookService],
 })
-export class BookModule { }
+export class BookModule {}

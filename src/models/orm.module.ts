@@ -4,10 +4,8 @@ import connectionOptions from './config/connection.config';
 
 @Global()
 @Module({
-    imports: [
-        TypeOrmModule.forRoot(
-            { autoLoadEntities: true, ...connectionOptions }
-        ),
-    ],
+  imports: [
+    TypeOrmModule.forRoot({ autoLoadEntities: true, ...connectionOptions }),
+  ],
 })
-export class OrmModule { }
+export class OrmModule {}
