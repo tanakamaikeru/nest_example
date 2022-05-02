@@ -8,11 +8,7 @@ import {
 import { Author } from './author.entity';
 
 @Entity()
-export class Book implements IBook {
-  constructor(bookProperties: IBookInitialProperties) {
-    Object.assign(this, bookProperties);
-  }
-
+export class Book {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -32,15 +28,4 @@ export class Book implements IBook {
     },
   ])
   author: Author;
-}
-
-interface IBook extends IBookAutoGenerateProperties, IBookInitialProperties { }
-
-interface IBookAutoGenerateProperties {
-  id: number;
-}
-
-interface IBookInitialProperties {
-  title: string;
-  authorId: string;
 }
